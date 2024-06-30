@@ -14,7 +14,7 @@ const capitalize = str => {
 };
 
 const SSCards = async (data, pp500) => {
-  const preURL = "https://github.com/DetegiCE/Github-Readme-ScoreSaber/blob/main/assets/img/bs_";
+  const preURL = "https://github.com/izunya/Github-Readme-BeatLeader/blob/main/assets/img/bs_";
   const sufURL = ".png?raw=true";
 
   let blockImage;

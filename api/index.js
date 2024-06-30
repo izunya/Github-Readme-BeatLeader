@@ -8,22 +8,22 @@ http.createServer(async (req, res) => {
     const { uid } = reqURL.query;
 
     if (!uid) {
-        res.write(JSON.stringify({error: 'Please input your ScoreSaber user ID. https://github-readme-score-saber.vercel.app/api?uid=YOUR_ID'}));
+        res.write(JSON.stringify({error: 'Please input your ScoreSaber user ID. https://github-readme-beat-leader.vercel.app/api?uid=YOUR_ID'}));
         res.end();
         return;
     }
 
-    const ssURL = `https://scoresaber.com/api/player/${uid}/full`;
+    const ssURL = `https://api.beatleader.xyz/player/${uid}`;
     const ssInfo = await fetch(ssURL);
     const json = await ssInfo.json();
 
     if (!json.playerInfo || json.error) {
-        res.write(JSON.stringify({error: 'Your ScoreSaber ID is not correct.'}));
+        res.write(JSON.stringify({error: 'Your BeatLeader ID is not correct.'}));
         res.end();
         return;
     }
 
-    const gitapiURL = `https://api.github.com/repos/DetegiCE/Github-Readme-ScoreSaber/issues`;
+    const gitapiURL = `https://api.github.com/repos/izunya/Github-Readme-BeatLeader/issues`;
     const pp500Info = await fetch(gitapiURL);
     const json500 = await pp500Info.json();
 
