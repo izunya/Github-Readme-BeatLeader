@@ -4,7 +4,7 @@ import os
 from github import Github
 from datetime import datetime, timedelta
 
-url = 'https://scoresaber.com/api/players/'
+url = 'https://api.beatldeader.xyz/players/'
 left = 500
 right = 1500
 pp500rank = -1
@@ -30,7 +30,7 @@ while True:
 
 token = os.environ['MY_GITHUB_TOKEN']
 git = Github(token)
-repo = git.get_user().get_repo('Github-Readme-ScoreSaber')
+repo = git.get_user().get_repo('Github-Readme-BeatLeader')
 
 dt_kst = datetime.now() + timedelta(hours=9)
 dt_str = dt_kst.strftime('%Y%m%d')
