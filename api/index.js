@@ -8,7 +8,7 @@ http.createServer(async (req, res) => {
     const { uid } = reqURL.query;
 
     if (!uid) {
-        res.write(JSON.stringify({error: 'Please input your ScoreSaber user ID. https://github-readme-beat-leader.vercel.app/api?uid=YOUR_ID'}));
+        res.write(JSON.stringify({error: 'Please input your BeatLeader user ID. https://github-readme-beat-leader.vercel.app/api?uid=YOUR_ID'}));
         res.end();
         return;
     }
